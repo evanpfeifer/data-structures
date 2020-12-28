@@ -1,5 +1,5 @@
 # data-structures
-Coding up all the common data structures. Here are the one's I've completed or are currently working on:
+Coding up all the common data structures. Here are the ones I've completed or are currently working on:
 - Linked list
 - Stack
 - Trees
