@@ -1,5 +1,7 @@
 package MyStack;
 
+import java.util.EmptyStackException;
+
 public class MyStack<T> implements HomemadeStack<T> {
     private Node top;
     private int size;
@@ -32,21 +34,38 @@ public class MyStack<T> implements HomemadeStack<T> {
     // RUNTIME: O(N)
     @Override
     public boolean contains(T item) {
+        Node curr = top;
+        while (curr != null) {
+            if (curr.item == item) {
+                return true;
+            }
+            curr = curr.below;
+        }
         return false;
     }
 
     // RUNTIME: O(1)
     @Override
     public T peek() {
+        if (top == null) {
+            throw new EmptyStackException();
+        }
         return top.item;
     }
 
     // RUNTIME: O(1)
     @Override
     public T pop() {
+        if (top == null) {
+            throw new EmptyStackException();
+        }
         T returnVal = top.item;
-        top.below.above = null;
-        top = top.below;
+        if (size == 1) {
+            top = null;
+        } else {
+            top.below.above = null;
+            top = top.below;
+        }
         size--;
         return returnVal;
     }
@@ -64,20 +83,9 @@ public class MyStack<T> implements HomemadeStack<T> {
         size++;
     }
 
+    // RUNTIME: O(1)
     @Override
     public int size() {
         return size;
-    }
-
-    public static void main(String[] args) {
-        HomemadeStack<Integer> myStack = new MyStack<Integer>();
-        for (int i = 0; i < 100; i++) {
-            myStack.push(i);
-            myStack.size();
-            myStack.peek();
-        }
-        for (int i = 0; i < 100; i++) {
-            myStack.push(i);
-        }
     }
 }
