@@ -39,12 +39,14 @@ public class MyLinkedList<E> implements LinkedList<E> {
         }
         if (head == null) {
             head = new Node(e, null, null);
+            tail = head;
         } else {
             Node newNode;
             Node curr;
             if (index == size) {
                 newNode = new Node(e, tail, null);
                 tail.next = newNode;
+                tail = newNode;
             } else {
                 curr = findNode(index);
                 newNode = new Node(e, curr.last, curr);
@@ -134,5 +136,16 @@ public class MyLinkedList<E> implements LinkedList<E> {
     // RUNTIME: O(1)
     public int size() {
         return size;
+    }
+
+    public static void main(String[] args) {
+        LinkedList<Integer> ll = new MyLinkedList<Integer>();
+        for (int i = 0; i < 50; i++) {
+            ll.add(34);
+        }
+        for (int i = 0; i < 10; i++) {
+            ll.remove(20);
+        }
+        System.out.println(ll.size());
     }
 }
