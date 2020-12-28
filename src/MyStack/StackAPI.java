@@ -1,6 +1,4 @@
-package MyStack;
-
-public interface HomemadeStack<T> {
+public interface StackAPI<T> {
     /* Remove all elements from the stack */
     void clear();
     /* Returns true if the stack contains the specified element */

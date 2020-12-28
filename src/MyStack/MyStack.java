@@ -1,8 +1,6 @@
-package MyStack;
-
 import java.util.EmptyStackException;
 
-public class MyStack<T> implements HomemadeStack<T> {
+public class MyStack<T> implements StackAPI<T> {
     private Node top;
     private int size;
 

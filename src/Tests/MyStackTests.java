@@ -3,10 +3,8 @@ import org.junit.Test;
 
 import java.util.Stack;
 
-import MyStack.*;
-
 public class MyStackTests {
-    HomemadeStack<Integer> myStack = new MyStack<Integer>();
+    StackAPI<Integer> myStack = new MyStack<Integer>();
     Stack<Integer> javaStack = new Stack<Integer>();
 
     private void clearStacks() {

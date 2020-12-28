@@ -1,6 +1,4 @@
-package MyLinkedList;
-
-public class MyLinkedList<E> implements HomemadeLinkedList<E> {
+public class MyLinkedList<E> implements LinkedListAPI<E> {
     private int size;
     private Node head;
     private Node tail;

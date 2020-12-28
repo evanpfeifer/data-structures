@@ -4,11 +4,8 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import MyLinkedList.MyLinkedList;
-import MyLinkedList.HomemadeLinkedList;
-
 public class MyLinkedListTests {
-    HomemadeLinkedList<Integer> myLL = new MyLinkedList();
+    LinkedListAPI<Integer> myLL = new MyLinkedList();
     List<Integer> javaLL = new ArrayList<Integer>();
 
     private void clearLists() {
