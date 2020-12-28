@@ -1,8 +1,6 @@
-package LinkedList;
+package MyLinkedList;
 
-import java.util.*;
-
-public class MyLinkedList<E> implements LinkedList<E> {
+public class MyLinkedList<E> implements HomemadeLinkedList<E> {
     private int size;
     private Node head;
     private Node tail;
@@ -119,7 +117,9 @@ public class MyLinkedList<E> implements LinkedList<E> {
         Node nodeToRemove = findNode(index);
         E returnItem = nodeToRemove.item;
         if (nodeToRemove == head) {
-            head.next.last = null;
+            if (size != 1) {
+                head.next.last = null;
+            }
             head = head.next;
         } else if (nodeToRemove == tail) {
             tail.last.next = null;
@@ -136,16 +136,5 @@ public class MyLinkedList<E> implements LinkedList<E> {
     // RUNTIME: O(1)
     public int size() {
         return size;
-    }
-
-    public static void main(String[] args) {
-        LinkedList<Integer> ll = new MyLinkedList<Integer>();
-        for (int i = 0; i < 50; i++) {
-            ll.add(34);
-        }
-        for (int i = 0; i < 10; i++) {
-            ll.remove(20);
-        }
-        System.out.println(ll.size());
     }
 }

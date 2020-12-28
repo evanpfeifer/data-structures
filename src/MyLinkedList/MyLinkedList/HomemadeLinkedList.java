@@ -1,6 +1,6 @@
-package LinkedList;
+package MyLinkedList;
 
-public interface LinkedList<E> {
+public interface HomemadeLinkedList<E> {
     /* Adds an element to the end of the list */
     void add(E e);
     /* Adds an element to a specified index position of the list */
