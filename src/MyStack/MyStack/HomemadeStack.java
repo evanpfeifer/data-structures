@@ -10,5 +10,7 @@ public interface HomemadeStack<T> {
     /* Remove and return the item at the top of the stack */
     T pop();
     /* Add an element to the top of the stack */
-    T push(T item);
+    void push(T item);
+    /* Return the size of the stack */
+    int size();
 }
