@@ -7,6 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/MyLinkedList" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/LinkedHashMap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/MyStack" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/HashTable" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Graphs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Trees" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Trie" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
